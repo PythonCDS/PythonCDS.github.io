@@ -1,0 +1,175 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ruslan Display', cursive;
+}
+
+body {
+	overflow: hidden;
+}
+
+
+.wrapper {
+	width: 100%;
+	position: absolute;
+}
+
+.background {
+	width: 100%;
+	height: 100vh;
+	background: url(img/background.png);
+	background-position: 100% 40%;
+}
+
+.player {
+	/*border: 1px solid black;*/
+	width: 6%;
+	height: 17.3%;
+	background: url(img/start.png) no-repeat;
+	position: absolute;
+	/*bottom: 36.4%;*/
+	bottom: 15%;
+	/*left: 47%;*/
+	left: 47%;
+	z-index: 3;
+	transition: bottom .25s ease-in-out;
+}
+
+.earth {
+	width: 100%;
+	height: 15%;
+	position: absolute;
+	background: url(img/earth.png) no-repeat;
+	background-size: cover;
+	top: 85%;
+/*	box-shadow: 0 -5px 4px 1px rgba(144, 238, 144, 1);*/
+	z-index: 4;
+}
+
+.walkLeft {
+	animation: walkLeft 1.7s;
+	transition: all 1.7s linear;
+}
+
+.walkRight {
+	animation: walkRight 1.7s;
+	transition: all 1.7s linear;
+}
+
+/* Items */
+
+.item-a, .item-b {
+	position: absolute;
+	width: 18%;
+	padding: 4% 0 4% 0;
+	bottom: 15%;
+	text-align: center;
+	font-family: 'Ruslan Display', cursive;
+	font-size: 19px;
+	transition: .5s;
+	border-radius: 5px;
+	font-weight: 100;
+	color: white;
+}
+
+.item-a {
+/*	background: rgba(255,255,255,.2);
+	border: 5px solid red;*/
+	background: url(img/table.png);
+	background-size: cover;
+	left: 8%;
+}
+
+.item-b {
+/*	background: rgba(255,255,255,.2);
+	border: 5px solid blue;*/
+	background: url(img/table.png);
+	background-size: cover;
+	left: 74%;	
+	transform: rotate(-4deg);
+	bottom: 13%;
+}
+
+.game-set {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font: 20px 'Helvetica';
+	font-weight: 600;
+	z-index: 5;
+}
+
+
+@keyframes walkLeft {
+	0% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(-1, 1);
+	} 10% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(-1, 1);
+	} 20% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(-1, 1);
+	} 30% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(-1, 1);
+	} 40% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(-1, 1);
+	} 50% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(-1, 1);
+	} 60% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(-1, 1);
+	} 70% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(-1, 1);
+	} 80% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(-1, 1);
+	} 90% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(-1, 1);
+	} 100% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(-1, 1);
+	}	
+}
+
+@keyframes walkRight {
+	0% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(1, 1);
+	} 10% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(1, 1);
+	} 20% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(1, 1);
+	} 30% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(1, 1);
+	} 40% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(1, 1);
+	} 50% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(1, 1);
+	} 60% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(1, 1);
+	} 70% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(1, 1);
+	} 80% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(1, 1);
+	} 90% {
+		background: url(img/move2.png) no-repeat;
+		transform: scale(1, 1);
+	} 100% {
+		background: url(img/move1.png) no-repeat;
+		transform: scale(1, 1);
+	}	
+}
